@@ -3,15 +3,14 @@
 ## inverse, the previously calculated and saved value is returned
 ## instead of calculating the value again.
 
-## The first function, makeCacheMatrix, creates a special "matrix" object, which 
-## a list containing the function that performs the following:
+## The first function, makeCacheMatrix, creates a special "matrix" object, x,
+## which is a list containing the function that performs the following:
 ## 1.- sets the value of the matrix
 ## 2.- gets the value of the matrix
 ## 3.- sets the value of the inverse
 ## 4.- gets the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-        ## creates a matrix object x and some associated sub-functions
         m <- NULL ## defines the cache m
         set <- function(y) {
                 x <<- y ## assigns the imput matrix y to the variable x in
@@ -36,7 +35,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## "setinverse" function.
 
 cacheSolve <- function(x, ...) {
-        ## returns a matrix that is the inverse of "x"
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
