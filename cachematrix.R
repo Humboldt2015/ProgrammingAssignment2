@@ -3,8 +3,9 @@
 ## inverse, the previously calculated and saved value is returned
 ## instead of calculating the value again.
 
-## The first function, makeCacheMatrix, creates a special "matrix" object, x,
-## which is a list containing the function that performs the following:
+## The first function, makeCacheMatrix, creates a special "matrix" object "x"
+## and some sub-functions, which is a list containing the function that
+## performs the following:
 ## 1.- sets the value of the matrix
 ## 2.- gets the value of the matrix
 ## 3.- sets the value of the inverse
@@ -28,13 +29,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## The next function, cacheSolve, calculates the inverse of the special matrix
-## created with the previous function.  It first checks if the inverse has been
-## already calculated.  If this is the case, it obtains the inverse from the
+## created in the previous function.  It first checks if the inverse has been
+## already calculated.  If this is the case, it gets the inverse from the
 ## cache and skips the calculation.  If not, it calculates the matrix inverse
-## and sets the value of the inverse of the inverse in the cache via the
-## "setinverse" function.
+## and sets the value of the inverse in the cache via the "setinverse" function.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x, ...) { ## returns a matrix that is the inverse of 'x'
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
