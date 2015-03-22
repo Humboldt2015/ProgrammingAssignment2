@@ -3,9 +3,13 @@
 ## inverse, the previously calculated and saved value is returned
 ## instead of calculating the value again.
 
+<<<<<<< HEAD
 ## The first function, makeCacheMatrix, creates a special "matrix" object "x"
 ## and some sub-functions, which is a list containing the function that
 ## performs the following:
+=======
+## The first function, makeCacheMatrix, creates a special "matrix" object, "x",
+## which is a list containing the function that performs the following:
 ## 1.- sets the value of the matrix
 ## 2.- gets the value of the matrix
 ## 3.- sets the value of the inverse
