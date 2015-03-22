@@ -1,21 +1,16 @@
-## Two functions are being created that cache the inverse of
-## a matrix and such that next time the user calculates the matrix
-## inverse, the previously calculated and saved value is returned
-## instead of calculating the value again.
+## Two functions are created to calculate the inverse of a matrix
+## and saves it to the cache such that the next time the user attempts to
+## calculate the matrix inverse, the previously saved value is returned instead
+## of repeating the calculation.
 
-<<<<<<< HEAD
 ## The first function, makeCacheMatrix, creates a special "matrix" object "x"
-## and some sub-functions, which is a list containing the function that
-## performs the following:
-=======
-## The first function, makeCacheMatrix, creates a special "matrix" object, "x",
-## which is a list containing the function that performs the following:
+## and some associated functions or methods.  This function is a list that:
 ## 1.- sets the value of the matrix
 ## 2.- gets the value of the matrix
 ## 3.- sets the value of the inverse
 ## 4.- gets the value of the inverse
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) { ## creates a matrix object x
         m <- NULL ## defines the cache m
         set <- function(y) {
                 x <<- y ## assigns the imput matrix y to the variable x in
